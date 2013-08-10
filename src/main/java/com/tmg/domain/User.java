@@ -3,96 +3,19 @@ package com.tmg.domain;
 import java.sql.Date;
 
 public class User {
+	public static final String TYPE_SUBSCRIBER = "Subscriber";
+	public static final String TYPE_USER = "User";
+	public static final String TYPE_SUPER_USER = "Super User";
+	
 	private String type;
 	private String firstName;
 	private String lastName;
-	private String titel;
+	private String title;
 	private Date dateOfBirth;
 	private String email;
 	private String password;
 	private Address home;
 	private Address billing;
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getTitel() {
-		return titel;
-	}
-
-	public void setTitel(String titel) {
-		this.titel = titel;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public Address getHome() {
-		return home;
-	}
-
-	public void setHome(Address home) {
-		this.home = home;
-	}
-
-	public Address getBilling() {
-		return billing;
-	}
-
-	public void setBilling(Address billing) {
-		this.billing = billing;
-	}
-
-	@Override
-	public String toString() {
-		return "User [type=" + type + ", firstName=" + firstName
-				+ ", lastName=" + lastName + ", titel=" + titel
-				+ ", dateOfBirth=" + dateOfBirth + ", email=" + email
-				+ ", password=" + password + ", home=" + home + ", billing="
-				+ billing + "]";
-	}
 
 	@Override
 	public int hashCode() {
@@ -109,7 +32,7 @@ public class User {
 				+ ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result
 				+ ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((titel == null) ? 0 : titel.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
@@ -158,10 +81,10 @@ public class User {
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (titel == null) {
-			if (other.titel != null)
+		if (title == null) {
+			if (other.title != null)
 				return false;
-		} else if (!titel.equals(other.titel))
+		} else if (!title.equals(other.title))
 			return false;
 		if (type == null) {
 			if (other.type != null)
@@ -169,6 +92,87 @@ public class User {
 		} else if (!type.equals(other.type))
 			return false;
 		return true;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Address getHome() {
+		return home;
+	}
+
+	public void setHome(Address home) {
+		this.home = home;
+	}
+
+	public Address getBilling() {
+		return billing;
+	}
+
+	public void setBilling(Address billing) {
+		this.billing = billing;
+	}
+
+	@Override
+	public String toString() {
+		return "User [type=" + type + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", title=" + title
+				+ ", dateOfBirth=" + dateOfBirth + ", email=" + email
+				+ ", password=" + password + ", home=" + home + ", billing="
+				+ billing + "]";
 	}
 
 }

@@ -13,7 +13,7 @@ import com.tmg.repository.UserDao;
  */
 public class UserDaoImpl implements UserDao {
 
-	private static Map<String, User> users;
+	private static volatile Map<String, User> users;
 
 	public UserDaoImpl() {
 		// singleton
@@ -26,6 +26,7 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
+	@Override
 	public boolean createUser(User user) {
 		// not allowed to create 2 entries
 		if(users.containsKey(user.getEmail())) {
@@ -37,10 +38,12 @@ public class UserDaoImpl implements UserDao {
 		return true;
 	}
 
+	@Override
 	public User retrieveUser(String username) {
 		return users.get(username);
 	}
 
+	@Override
 	public boolean updateUser(User user) {
 		
 		// user does not exit therefore can't update
@@ -53,6 +56,7 @@ public class UserDaoImpl implements UserDao {
 		return true;
 	}
 
+	@Override
 	public boolean deleteUser(String username) {
 		if(!users.containsKey(username)) {
 			return true;
@@ -60,7 +64,5 @@ public class UserDaoImpl implements UserDao {
 		
 		users.remove(username);
 		return true;
-	}
-	
-	
+	}	
 }
