@@ -5,6 +5,7 @@ import java.sql.Date;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.tmg.controller.impl.UserManagerImpl;
 import com.tmg.domain.Address;
 import com.tmg.domain.User;
 import com.tmg.repository.UserDao;

@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.tmg.bdd.RunCukesTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.766 sec <<< FAILURE!
+Then I should get created status 201(Scenario: Create a new Subscriber)  Time elapsed: 0.005 sec  <<< FAILURE!
+java.lang.AssertionError: TODO:
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.tmg.bdd.steps.UserManager.I_should_get_created_status(UserManager.java:40)
+	at ?.Then I should get created status 201(user_manager.feature:12)
+Scenario: Create a new Subscriber  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError: TODO:
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.tmg.bdd.steps.UserManager.I_should_get_created_status(UserManager.java:40)
+	at ?.Then I should get created status 201(user_manager.feature:12)
