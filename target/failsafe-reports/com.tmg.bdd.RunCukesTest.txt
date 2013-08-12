@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tmg.bdd.RunCukesTest
 -------------------------------------------------------------------------------
-Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.887 sec
+Tests run: 59, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.053 sec

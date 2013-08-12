@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="34" name="com.tmg.bdd.RunCukesTest">
+<testsuite failures="0" time="0.007" errors="0" skipped="0" tests="59" name="com.tmg.bdd.RunCukesTest">
   <properties>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -19,7 +19,7 @@
     <property name="user.language" value="en"/>
     <property name="java.naming.factory.initial" value="org.apache.naming.java.javaURLContextFactory"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_11\jre\bin"/>
-    <property name="classworlds.conf" value="D:\Projects\jobs\telegraph\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4158082405541187855.tmp"/>
+    <property name="classworlds.conf" value="D:\Projects\jobs\telegraph\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3118316501245068018.tmp"/>
     <property name="java.version" value="1.7.0_11"/>
     <property name="java.util.logging.manager" value="org.apache.juli.ClassLoaderLogManager"/>
     <property name="user.timezone" value="Europe/London"/>
@@ -83,33 +83,58 @@
   <testcase time="0" classname="Scenario: Create a new Subscriber" name="And I call api register &quot;/register&quot;"/>
   <testcase time="0" classname="Scenario: Create a new Subscriber" name="Then I should get response status 201"/>
   <testcase time="0.001" classname="Scenario: Create a new Subscriber" name="Scenario: Create a new Subscriber"/>
-  <testcase time="0.001" classname="Scenario: Create a new User" name="Given that the &quot;newuser@tmg.com&quot; user does not exist"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="Given that the &quot;newuser@tmg.com&quot; user does not exist"/>
   <testcase time="0" classname="Scenario: Create a new User" name="And &quot;superuser@tmg.com&quot; exists with password &quot;super&quot;"/>
-  <testcase time="0" classname="Scenario: Create a new User" name="When username is &quot;superuser@tmg.com&quot;"/>
+  <testcase time="0.001" classname="Scenario: Create a new User" name="When username is &quot;superuser@tmg.com&quot;"/>
   <testcase time="0" classname="Scenario: Create a new User" name="And password is &quot;super&quot;"/>
   <testcase time="0" classname="Scenario: Create a new User" name="And data set is:"/>
-  <testcase time="0" classname="Scenario: Create a new User" name="And I call api register &quot;/register&quot;"/>
+  <testcase time="0.001" classname="Scenario: Create a new User" name="And I call api register &quot;/register&quot;"/>
   <testcase time="0" classname="Scenario: Create a new User" name="Then I should get response status 201"/>
   <testcase time="0" classname="Scenario: Create a new User" name="Scenario: Create a new User"/>
   <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
   <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="When username is &quot;subscriber@tmg.com&quot;"/>
-  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="And password is &quot;subscriber&quot;"/>
+  <testcase time="0.001" classname="Scenario: Retrieve my details as Subscriber" name="And password is &quot;subscriber&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="And adminUsername is &quot;&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="And I call api mydetails &quot;/mydetails&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="Then I should get response status 200"/>
   <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="Scenario: Retrieve my details as Subscriber"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="And that the &quot;user@tmg.com&quot; user exist"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="When username is &quot;subscriber@tmg.com&quot;"/>
-  <testcase time="0.001" classname="Scenario: Retrieve details of Subscriber as User" name="And password is &quot;user&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="And password is &quot;user&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="And adminUsername is &quot;user@tmg.com&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="And I call api mydetails &quot;/mydetails&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="Then I should get response status 200"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="Scenario: Retrieve details of Subscriber as User"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And that the &quot;superuser@tmg.com&quot; user exist"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="When username is &quot;subscriber@tmg.com&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And password is &quot;super&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And adminUsername is &quot;superuser@tmg.com&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And I call api mydetails &quot;/mydetails&quot;"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="Then I should get response status 200"/>
   <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="Scenario: Retrieve details of Subscriber as Super User"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="Given that the &quot;user@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="When username is &quot;user@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="And password is &quot;super&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="And adminUsername is &quot;superuser@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="And I call api mydetails &quot;/mydetails&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="Then I should get response status 200"/>
+  <testcase time="0" classname="Scenario: Retrieve details of User as Super User" name="Scenario: Retrieve details of User as Super User"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="And that the &quot;superuser@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="When password is &quot;super&quot;"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="And adminUsername is &quot;superuser@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="And data set is:"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="And I call api update &quot;/update&quot;"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="Then I should get response status 200"/>
+  <testcase time="0" classname="Scenario: Update Subscriber details as Super User" name="Scenario: Update Subscriber details as Super User"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="And that the &quot;superuser@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="When username is &quot;subscriber@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="And password is &quot;super&quot;"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="And adminUsername is &quot;superuser@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="And I call api delete &quot;/delete&quot;"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="Then I should get response status 200"/>
+  <testcase time="0" classname="Scenario: Delete a Subscriber as Super User" name="Scenario: Delete a Subscriber as Super User"/>
 </testsuite>

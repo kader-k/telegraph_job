@@ -34,6 +34,7 @@ Then I should get response status 200
 
 Scenario: Retrieve details of Subscriber as User
 Given that the "subscriber@tmg.com" user exist
+And that the "user@tmg.com" user exist
 When username is "subscriber@tmg.com" 
 And password is "user"
 And adminUsername is "user@tmg.com"
@@ -42,8 +43,41 @@ Then I should get response status 200
 
 Scenario: Retrieve details of Subscriber as Super User
 Given that the "subscriber@tmg.com" user exist
+And that the "superuser@tmg.com" user exist
 When username is "subscriber@tmg.com" 
 And password is "super"
 And adminUsername is "superuser@tmg.com"
 And I call api mydetails "/mydetails" 
 Then I should get response status 200
+
+Scenario: Retrieve details of User as Super User
+Given that the "user@tmg.com" user exist
+When username is "user@tmg.com" 
+And password is "super"
+And adminUsername is "superuser@tmg.com"
+And I call api mydetails "/mydetails" 
+Then I should get response status 200
+
+Scenario: Update Subscriber details as Super User
+Given that the "subscriber@tmg.com" user exist
+And that the "superuser@tmg.com" user exist
+When password is "super"
+And adminUsername is "superuser@tmg.com"
+And data set is:
+|type        |firstName |lastName    |title    |dateOfBirth    |email               |password |home_houseNum  |home_postcode |billing_houseNum |billing_postcode |
+|Subscriber  |update    |lastname    |mr       |1990-01-01     |subscriber@tmg.com  |password |10             |MK100AB       |10               |MK100AB          |
+And I call api update "/update" 
+Then I should get response status 200
+
+
+Scenario: Delete a Subscriber as Super User
+Given that the "subscriber@tmg.com" user exist
+And that the "superuser@tmg.com" user exist
+When username is "subscriber@tmg.com" 
+And password is "super"
+And adminUsername is "superuser@tmg.com"
+And I call api delete "/delete" 
+Then I should get response status 200
+
+
+

@@ -34,5 +34,20 @@ public class UserManagerSupport {
 		return res.getStatusCode();
 	}
 
+	public int delete(String path, String userToDelete, String password, String adminUsername) {
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("userToDelete", userToDelete);
+		params.put("adminPassword", password);
+		params.put("adminUser", adminUsername);
+		
+		Response res = expect().given().formParameters(params).contentType("application/json").delete(path);
+		return res.getStatusCode();
+	}
+
+	public int update(String path, AdminUser user) {	
+		Response res = expect().given().request().body(user).contentType("application/json").put(path, new HashMap<String, String>());
+		return res.getStatusCode();
+	}
+
 	
 }
