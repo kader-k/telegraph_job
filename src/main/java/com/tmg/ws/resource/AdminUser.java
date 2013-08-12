@@ -2,6 +2,11 @@ package com.tmg.ws.resource;
 
 import com.tmg.domain.User;
 
+/**
+ * Wrapper class for holding user and admin user details
+ * @author Kader
+ *
+ */
 public class AdminUser {
 	private User user;
 	private String adminUsername;
@@ -30,5 +35,4 @@ public class AdminUser {
 	public void setAdminPassword(String adminPassword) {
 		this.adminPassword = adminPassword;
 	}
-
 }

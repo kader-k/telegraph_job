@@ -9,6 +9,11 @@ import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
 import com.tmg.ws.resource.AdminUser;
 
+/** BDD support class for making REST calls
+ * 
+ * @author Kader
+ *
+ */
 public class UserManagerSupport {
 	
 	public UserManagerSupport() {
@@ -48,6 +53,4 @@ public class UserManagerSupport {
 		Response res = expect().given().request().body(user).contentType("application/json").put(path, new HashMap<String, String>());
 		return res.getStatusCode();
 	}
-
-	
 }
