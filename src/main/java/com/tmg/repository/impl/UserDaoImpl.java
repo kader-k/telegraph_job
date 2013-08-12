@@ -15,12 +15,41 @@ public class UserDaoImpl implements UserDao {
 
 	private static volatile Map<String, User> users;
 
+	private void initSuperUser() {
+		User su = new User();
+		su.setEmail("superuser@tmg.com");
+		su.setPassword("super");
+		su.setType(User.TYPE_SUPER_USER);
+		su.setFirstName("Super");
+		su.setLastName("User");
+		users.put(su.getEmail(), su);
+		
+		User u = new User();
+		u.setEmail("user@tmg.com");
+		u.setPassword("user");
+		u.setType(User.TYPE_USER);
+		u.setFirstName("User");
+		u.setLastName("Normal");
+		users.put(u.getEmail(), u);
+		
+		User sub = new User();
+		sub.setEmail("subscriber@tmg.com");
+		sub.setPassword("subscriber");
+		sub.setType(User.TYPE_SUBSCRIBER);
+		sub.setFirstName("Subscriber");
+		sub.setLastName("Normal");
+		users.put(sub.getEmail(), sub);
+	}
+	
 	public UserDaoImpl() {
 		// singleton
 		if (users == null) {
 			synchronized (UserDaoImpl.class) {
 				if (users == null) {
 					users = new Hashtable<String, User>();
+					
+					// super user can't be created via api therefore it is created here
+					this.initSuperUser();					
 				}
 			}
 		}

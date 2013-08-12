@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="34" name="com.tmg.bdd.RunCukesTest">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="catalina.base" value="D:\Projects\jobs\telegraph\tmg\target\tomcat"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="catalina.useNaming" value="true"/>
+    <property name="os.name" value="Windows 8"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_11\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_11\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_11\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_11\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_11\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_11\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_11\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_11\jre\classes"/>
+    <property name="java.util.logging.config.file" value="D:\Projects\jobs\telegraph\tmg\target\tomcat\conf\logging.properties"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.runtime.version" value="1.7.0_11-b21"/>
+    <property name="user.name" value="Kader"/>
+    <property name="shared.loader" value=""/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="tomcat.util.buf.StringCache.byte.enabled" value="true"/>
+    <property name="user.language" value="en"/>
+    <property name="java.naming.factory.initial" value="org.apache.naming.java.javaURLContextFactory"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_11\jre\bin"/>
+    <property name="classworlds.conf" value="D:\Projects\jobs\telegraph\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4158082405541187855.tmp"/>
+    <property name="java.version" value="1.7.0_11"/>
+    <property name="java.util.logging.manager" value="org.apache.juli.ClassLoaderLogManager"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_11\jre\lib\endorsed"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="package.access" value="sun.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="user.country" value="GB"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_11\jre"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="os.version" value="6.2"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.version" value="23.6-b04"/>
+    <property name="user.variant" value=""/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="tomcat.util.scan.DefaultJarScanner.jarsToSkip" value="bootstrap.jar,commons-daemon.jar,tomcat-juli.jar,annotations-api.jar,el-api.jar,jsp-api.jar,servlet-api.jar,catalina.jar,catalina-ant.jar,catalina-ha.jar,catalina-tribes.jar,jasper.jar,jasper-el.jar,ecj-*.jar,tomcat-api.jar,tomcat-util.jar,tomcat-coyote.jar,tomcat-dbcp.jar,tomcat-jni.jar,tomcat-spdy.jar,tomcat-i18n-en.jar,tomcat-i18n-es.jar,tomcat-i18n-fr.jar,tomcat-i18n-ja.jar,tomcat-juli-adapters.jar,catalina-jmx-remote.jar,catalina-ws.jar,tomcat-jdbc.jar,commons-beanutils*.jar,commons-codec*.jar,commons-collections*.jar,commons-dbcp*.jar,commons-digester*.jar,commons-fileupload*.jar,commons-httpclient*.jar,commons-io*.jar,commons-lang*.jar,commons-logging*.jar,commons-math*.jar,commons-pool*.jar,jstl.jar,geronimo-spec-jaxrpc*.jar,wsdl4j*.jar,ant.jar,ant-junit*.jar,aspectj*.jar,jmx.jar,h2*.jar,hibernate*.jar,httpclient*.jar,jmx-tools.jar,jta*.jar,log4j*.jar,mail*.jar,slf4j*.jar,xercesImpl.jar,xmlParserAPIs.jar,xml-apis.jar,access-bridge-64.jar,dnsns.jar,jaccess.jar,ldapsec.jar,localedata.jar,sunjce_provider.jar,sunmscapi.jar,sunpkcs11.jar,jhall.jar,tools.jar,sunec.jar,zipfs.jar,gnome-java-bridge.jar,pulse-java.jar,apple_provider.jar,AppleScriptEngine.jar,CoreAudio.jar,dns_sd.jar,j3daudio.jar,j3dcore.jar,j3dutils.jar,jai_core.jar,jai_codec.jar,mlibwrapper_jai.jar,MRJToolkit.jar,vecmath.jar,junit.jar,junit-*.jar,ant-launcher.jar"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="package.definition" value="sun.,java.,org.apache.catalina.,org.apache.coyote.,org.apache.tomcat.,org.apache.jasper."/>
+    <property name="user.script" value=""/>
+    <property name="java.naming.factory.url.pkgs" value="org.apache.naming"/>
+    <property name="user.home" value="C:\Users\Kader"/>
+    <property name="org.apache.catalina.startup.ContextConfig.jarsToSkip" value=""/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_11\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files\nodejs\;D:\Data\git\KirinJS\Kirin;.;D:\Programs\apache-ant-1.8.4\bin;D:\Programs\maven\apache-maven-3.0.4\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\cygwin;D:\Programs\Android\android-sdk\tools;D:\Programs\Android\android-sdk;C:\Users\Kader\AppData\Roaming\npm\;."/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="org.apache.catalina.startup.TldConfig.jarsToSkip" value=""/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="common.loader" value="${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar"/>
+    <property name="maven.home" value="D:\Projects\jobs\telegraph\tmg\EMBEDDED"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean verify"/>
+    <property name="java.class.path" value="/D:/Programs/eclipse/kepler/configuration/org.eclipse.osgi/bundles/531/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="catalina.home" value="D:\Projects\jobs\telegraph\tmg\target\tomcat"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.io.tmpdir" value="C:\Users\Kader\AppData\Local\Temp\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="server.loader" value=""/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_11\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="D:\Projects\jobs\telegraph\tmg"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="tomcat.maven.http.port" value="8080"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="maven.bootclasspath" value="/D:/Programs/eclipse/kepler/configuration/org.eclipse.osgi/bundles/531/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+  </properties>
+  <testcase time="0.003" classname="Scenario: Create a new Subscriber" name="Given that the &quot;newsubscriber@tmg.com&quot; user does not exist"/>
+  <testcase time="0" classname="Scenario: Create a new Subscriber" name="When data set is:"/>
+  <testcase time="0" classname="Scenario: Create a new Subscriber" name="And I call api register &quot;/register&quot;"/>
+  <testcase time="0" classname="Scenario: Create a new Subscriber" name="Then I should get response status 201"/>
+  <testcase time="0.001" classname="Scenario: Create a new Subscriber" name="Scenario: Create a new Subscriber"/>
+  <testcase time="0.001" classname="Scenario: Create a new User" name="Given that the &quot;newuser@tmg.com&quot; user does not exist"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="And &quot;superuser@tmg.com&quot; exists with password &quot;super&quot;"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="When username is &quot;superuser@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="And password is &quot;super&quot;"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="And data set is:"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="And I call api register &quot;/register&quot;"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="Then I should get response status 201"/>
+  <testcase time="0" classname="Scenario: Create a new User" name="Scenario: Create a new User"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="When username is &quot;subscriber@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="And password is &quot;subscriber&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="And adminUsername is &quot;&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="And I call api mydetails &quot;/mydetails&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="Then I should get response status 200"/>
+  <testcase time="0" classname="Scenario: Retrieve my details as Subscriber" name="Scenario: Retrieve my details as Subscriber"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="When username is &quot;subscriber@tmg.com&quot;"/>
+  <testcase time="0.001" classname="Scenario: Retrieve details of Subscriber as User" name="And password is &quot;user&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="And adminUsername is &quot;user@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="And I call api mydetails &quot;/mydetails&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="Then I should get response status 200"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as User" name="Scenario: Retrieve details of Subscriber as User"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="Given that the &quot;subscriber@tmg.com&quot; user exist"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="When username is &quot;subscriber@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And password is &quot;super&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And adminUsername is &quot;superuser@tmg.com&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="And I call api mydetails &quot;/mydetails&quot;"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="Then I should get response status 200"/>
+  <testcase time="0" classname="Scenario: Retrieve details of Subscriber as Super User" name="Scenario: Retrieve details of Subscriber as Super User"/>
+</testsuite>

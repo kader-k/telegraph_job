@@ -5,7 +5,45 @@ So that I can administrate the users of the system
 
 Scenario: Create a new Subscriber
 Given that the "newsubscriber@tmg.com" user does not exist
-When I call api "/register" with:
+When data set is:
 |type        |firstName    |lastName    |title    |dateOfBirth    |email                  |password |home_houseNum  |home_postcode |billing_houseNum |billing_postcode |
 |Subscriber  |firstName    |lastname    |mr       |1990-01-01     |newsubscriber@tmg.com  |password |10             |MK100AB       |10               |MK100AB          |
-Then I should get created response status 201
+And I call api register "/register"
+Then I should get response status 201
+
+
+Scenario: Create a new User
+Given that the "newuser@tmg.com" user does not exist
+And "superuser@tmg.com" exists with password "super"
+When username is "superuser@tmg.com"
+And password is "super"
+And data set is: 
+|type        |firstName    |lastName    |title    |dateOfBirth    |email            |password |
+|User        |firstName    |lastname    |mr       |1990-01-01     |newuser@tmg.com  |password |
+And I call api register "/register"
+Then I should get response status 201
+
+Scenario: Retrieve my details as Subscriber
+Given that the "subscriber@tmg.com" user exist
+When username is "subscriber@tmg.com" 
+And password is "subscriber"
+And adminUsername is ""
+And I call api mydetails "/mydetails" 
+Then I should get response status 200
+
+
+Scenario: Retrieve details of Subscriber as User
+Given that the "subscriber@tmg.com" user exist
+When username is "subscriber@tmg.com" 
+And password is "user"
+And adminUsername is "user@tmg.com"
+And I call api mydetails "/mydetails" 
+Then I should get response status 200
+
+Scenario: Retrieve details of Subscriber as Super User
+Given that the "subscriber@tmg.com" user exist
+When username is "subscriber@tmg.com" 
+And password is "super"
+And adminUsername is "superuser@tmg.com"
+And I call api mydetails "/mydetails" 
+Then I should get response status 200

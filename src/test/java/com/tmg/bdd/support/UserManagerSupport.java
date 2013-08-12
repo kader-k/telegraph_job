@@ -3,6 +3,7 @@ package com.tmg.bdd.support;
 import static com.jayway.restassured.RestAssured.expect;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
@@ -20,5 +21,18 @@ public class UserManagerSupport {
 		Response res = expect().given().request().body(user).contentType("application/json").put(path, new HashMap<String, String>());
 		return res.getStatusCode();
 	}
+
+	public int retrieve(String path, String username, String password, String adminUsername) {
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("username", username);
+		params.put("password", password);
+		if(adminUsername != null) {
+			params.put("adminuser", adminUsername);
+		}
+		
+		Response res = expect().given().formParameters(params).contentType("application/json").post(path);
+		return res.getStatusCode();
+	}
+
 	
 }

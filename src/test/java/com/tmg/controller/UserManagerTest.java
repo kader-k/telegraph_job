@@ -101,7 +101,7 @@ public class UserManagerTest {
 		UserManager userManager = new UserManagerImpl();
 		User user = this.createValidUser();
 		user.setType(User.TYPE_USER);
-		user.setEmail("user@tmg.com");
+		user.setEmail("user1@tmg.com");
 		boolean expected = true;
 		boolean actual = userManager.createAccount(user, username, password);
 		
