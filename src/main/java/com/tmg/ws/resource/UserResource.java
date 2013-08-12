@@ -53,7 +53,7 @@ Content-Type: application/json
 	 * 
 	 * @param username
 	 * @param password
-	 * @param adminuser
+	 * @param adminUsername
 	 * @return
 	 */
 	@POST
@@ -61,10 +61,10 @@ Content-Type: application/json
 	@Produces({MediaType.APPLICATION_JSON})
 	public Response retrieve(@FormParam("username") String username, 
 			@FormParam("password") String password,
-			@FormParam("adminuser") String adminuser) {
+			@FormParam("adminUsername") String adminUsername) {
 		
 		try {
-			User user = this.userManager.retrieveUserDetails(username, password, adminuser);
+			User user = this.userManager.retrieveUserDetails(username, password, adminUsername);
 			return Response.ok(user).build();
 			
 		} catch (Exception e) {
@@ -98,20 +98,20 @@ Content-Type: application/json
 Host: localhost:8080
 Content-Type: application/json
 
-userToDelete=x&adminUser=adminUser&adminPassword=adminPassword
+userToDelete=x&adminUsername=adminUsername&adminPassword=adminPassword
 	 * @param userToDelete
-	 * @param adminUser
+	 * @param adminUsername
 	 * @param adminPassword
 	 * @return
 	 */
 	@DELETE
 	@Path("/delete")
 	public Response delete(@FormParam("userToDelete") String userToDelete, 
-			@FormParam("adminUser") String adminUser,
+			@FormParam("adminUsername") String adminUsername,
 			@FormParam("adminPassword") String adminPassword) {
 
 		try {
-			return this.userManager.deleteUser(userToDelete, adminUser, adminPassword) ?
+			return this.userManager.deleteUser(userToDelete, adminUsername, adminPassword) ?
 				Response.status(Status.OK).build() : Response.status(Status.NOT_MODIFIED).build();
 		} catch (Exception e) {
 			return Response.status(Status.UNAUTHORIZED).build();

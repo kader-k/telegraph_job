@@ -32,7 +32,7 @@ public class UserManagerSupport {
 		params.put("username", username);
 		params.put("password", password);
 		if(adminUsername != null) {
-			params.put("adminuser", adminUsername);
+			params.put("adminUsername", adminUsername);
 		}
 		
 		Response res = expect().given().formParameters(params).contentType("application/json").post(path);
@@ -43,7 +43,7 @@ public class UserManagerSupport {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("userToDelete", userToDelete);
 		params.put("adminPassword", password);
-		params.put("adminUser", adminUsername);
+		params.put("adminUsername", adminUsername);
 		
 		Response res = expect().given().formParameters(params).contentType("application/json").delete(path);
 		return res.getStatusCode();

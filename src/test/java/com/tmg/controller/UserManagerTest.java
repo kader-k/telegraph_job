@@ -33,11 +33,11 @@ public class UserManagerTest {
 	@Test
 	public void deleteAccount() throws Exception {
 		String userToDelete = "deleteMe@tmg.com";
-		String adminUser = "superUser@tmg.com";
+		String adminUsername = "superUser@tmg.com";
 		String adminPassword = "password";
 		User superUser = this.createValidUser();
 		superUser.setType(User.TYPE_SUPER_USER);
-		superUser.setEmail(adminUser);
+		superUser.setEmail(adminUsername);
 		superUser.setPassword(adminPassword);
 		
 		User deleteMeUser = this.createValidUser();
@@ -49,7 +49,7 @@ public class UserManagerTest {
 		userDao.createUser(deleteMeUser);
 
 		UserManager userManager = new UserManagerImpl();
-		boolean actual = userManager.deleteUser(userToDelete, adminUser, adminPassword);
+		boolean actual = userManager.deleteUser(userToDelete, adminUsername, adminPassword);
 		boolean expected = true;
 		Assert.assertEquals(expected, actual);
 	}
@@ -60,10 +60,10 @@ public class UserManagerTest {
 		User updateMe = this.createValidUser();
 		updateMe.setFirstName("update");
 		
-		String adminUser = "adminUser@tmg.com";
+		String adminUsername = "adminUser@tmg.com";
 		String adminPassword = "password";
 		User admin = this.createValidUser();
-		admin.setEmail(adminUser);
+		admin.setEmail(adminUsername);
 		admin.setPassword(adminPassword);
 		admin.setType(User.TYPE_SUPER_USER);
 		
@@ -72,7 +72,7 @@ public class UserManagerTest {
 		
 		UserManager userManager = new UserManagerImpl();
 		boolean expected = true;
-		boolean actual = userManager.updateUser(updateMe, adminUser, adminPassword);
+		boolean actual = userManager.updateUser(updateMe, adminUsername, adminPassword);
 		
 		Assert.assertEquals(expected, actual);
 	}

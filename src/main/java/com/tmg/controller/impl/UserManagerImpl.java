@@ -90,7 +90,7 @@ public class UserManagerImpl implements UserManager {
 
 
 	@Override
-	public boolean deleteUser(String userToDelete, String adminUser, String adminPassword) throws Exception {
+	public boolean deleteUser(String userToDelete, String adminUsername, String adminPassword) throws Exception {
 		User deleteMe = this.userDao.retrieveUser(userToDelete); 
 		if(deleteMe == null) {
 			return true;
@@ -101,7 +101,7 @@ public class UserManagerImpl implements UserManager {
 			throw new Exception("Authorisation failed");
 		}
 		
-		if(isSuperValidSuperUser(adminUser, adminPassword)) {
+		if(isSuperValidSuperUser(adminUsername, adminPassword)) {
 			return this.userDao.deleteUser(userToDelete);
 		}
 		
@@ -110,10 +110,10 @@ public class UserManagerImpl implements UserManager {
 
 
 
-	private boolean isSuperValidSuperUser(String adminUser, String adminPassword)
+	private boolean isSuperValidSuperUser(String adminUsername, String adminPassword)
 			throws Exception {
 		
-		String userType = this.retrieveAdminType(adminUser, adminPassword);
+		String userType = this.retrieveAdminType(adminUsername, adminPassword);
 		
 		return userType == null ? false : userType.equals(User.TYPE_SUPER_USER);
 	}
@@ -121,7 +121,7 @@ public class UserManagerImpl implements UserManager {
 
 
 	@Override
-	public boolean updateUser(User user, String adminUser, String adminPassword)
+	public boolean updateUser(User user, String adminUsername, String adminPassword)
 			throws Exception {
 		if(user == null) {
 			return false;
@@ -136,7 +136,7 @@ public class UserManagerImpl implements UserManager {
 			return false;
 		}
 		
-		String adminType = this.retrieveAdminType(adminUser, adminPassword);
+		String adminType = this.retrieveAdminType(adminUsername, adminPassword);
 		
 		if(adminType == null) {
 			return false;
