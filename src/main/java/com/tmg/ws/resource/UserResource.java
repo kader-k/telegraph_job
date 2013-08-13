@@ -15,6 +15,11 @@ import com.tmg.controller.UserManager;
 import com.tmg.controller.impl.UserManagerImpl;
 import com.tmg.domain.User;
 
+/**
+ * This is the API the "web" and "mobile" teams will call from the "register" and "my details" pages on the website and the internal tools will use for house keeping.
+ * @author Kader
+ *
+ */
 @Path("user")
 public class UserResource {
 	
@@ -25,15 +30,17 @@ public class UserResource {
 	}
 	
 	/**
-	 * anyone can register
-PUT http://localhost:8080/tmg/api/user/register
-Host: localhost:8080
-Accept: application/json
-Content-Type: application/json
-
-{"user":{"type":"Subscriber","firstName":"Subscriber","lastName":"One","title":"Mr","dateOfBirth":"2008-02-01","email":"usernew@tmg.com","password":"password"}}
-	 * @param subscriber
-	 * @return
+	 * <b>PUT:</b> http://localhost:8080/tmg/api/user/register <br/>
+	 * <b>Accept:</b> application/json <br/>
+	 * <b>Content-Type:</b> application/json <br/>
+	 * To register a Subscriber, the adminUsername and adminPassword are not required however, all user object properties are mandatory including the home and billing address. <br/>
+	 * <b>Body:</b> {"user":{"type":"Subscriber","firstName":"Normal","lastName":"Subscriber","title":"Mr","dateOfBirth":"2008-02-01","email":"newsubscriber@tmg.com","password":"password","home":{"houseNumber":"101", "address1":"Home", "city":"London"},"billing":{"houseNumber":"101", "address1":"Home", "city":"London"}}} <br/>
+	 * 
+	 * To register an User, the adminUsername and adminPassword are required but the home and billing addresses are optional. The admin has to be Super User type for registering User type <br/>
+	 * <b>Body:</b> {"user":{"type":"User","firstName":"Normal","lastName":"User","title":"Mr","dateOfBirth":"2008-02-01","email":"newuser@tmg.com","password":"password"},"adminUsername":"superuser@tmg.com", "adminPassword":"super"} <br/>
+	 * 
+	 * @param AdminUser
+	 * @return response code of 201 (CREATED) | 406 (NOT_ACCEPTABLE) | 401 (UNAUTHORIZED)
 	 */
 	@PUT
 	@Path("/register")
@@ -50,11 +57,20 @@ Content-Type: application/json
 	}
 	
 	/**
+	 * <b>POST:</b> http://localhost:8080/tmg/api/user/mydetails <br/>
+	 * <b>Content-Type:</b> application/json <br/>
 	 * 
+	 * To get the subscriber details, pass in the username and password <br/>
+	 * <b>Body:</b> username=newuser@tmg.com&password=password <br/>
+	 * 
+	 * To get the user or subscriber details, pass in the subscriber username, adminUsername and adminPassword <br/>
+	 * <b>Body:</b> username=newuser@tmg.com&adminUsername=superuser@tmg.compassword=super& <br/>
+	 * 
+	 * Admin in this case can be User or Super User type <br/>
 	 * @param username
 	 * @param password
 	 * @param adminUsername
-	 * @return
+	 * @return json
 	 */
 	@POST
 	@Path("/mydetails")
@@ -74,9 +90,18 @@ Content-Type: application/json
 
 	
 	/**
-	 * 
-	 * @param user
-	 * @return
+	 * <b>PUT:</b> http://localhost:8080/tmg/api/user/update <br/>
+	 * <b>Accept:</b> application/json <br/>
+	 * <b>Content-Type:</b> application/json <br/>
+	 * To update a Subscriber, the adminUsername and adminPassword are required and all user object properties are mandatory including the home and billing address. <br/>
+	 * User or Super User can only update Subscriber <br/>
+	 * <b>Body:</b> {"user":{"type":"Subscriber","firstName":"Normal","lastName":"Subscriber","title":"Mr","dateOfBirth":"2008-02-01","email":"newsubscriber@tmg.com","password":"password","home":{"houseNumber":"101", "address1":"Home", "city":"London"},"billing":{"houseNumber":"101", "address1":"Home", "city":"London"}}, "adminUsername":"superuser@tmg.com", "adminPassword":"super"} <br/>
+	 * <br/>
+	 * To update an User, the adminUsername and adminPassword are required but the home and billing addresses are optional. The admin has to be Super User type for updating User type <br/>
+	 * <b>Body:</b> {"user":{"type":"User","firstName":"Normal","lastName":"User","title":"Mr","dateOfBirth":"2008-02-01","email":"newuser@tmg.com","password":"password"},"adminUsername":"superuser@tmg.com", "adminPassword":"super"} <br/>
+
+	 * @param AdminUser
+	 * @return response code of 201 (CREATED) | 406 (NOT_ACCEPTABLE) | 401 (UNAUTHORIZED)
 	 */
 	@PUT
 	@Path("/update")
@@ -94,15 +119,13 @@ Content-Type: application/json
 	
 	
 	/**
-	 * DELETE http://localhost:8080/tmg/api/user/delete
-Host: localhost:8080
-Content-Type: application/json
-
-userToDelete=x&adminUsername=adminUsername&adminPassword=adminPassword
+	 * <b>DELETE:</b> http://localhost:8080/tmg/api/user/delete <br/>
+	 * Only Super User type can delete an User or Subscriber type <br/>
+	 * <b>Body:</b> userToDelete=user1@tmg.com&adminUsername=superuser&adminPassword=super <br/>
 	 * @param userToDelete
 	 * @param adminUsername
 	 * @param adminPassword
-	 * @return
+	 * @return 200 (OK) | 304 (NOT_MODIFIED) | 401 (UNAUTHORIZED)
 	 */
 	@DELETE
 	@Path("/delete")
@@ -126,5 +149,4 @@ userToDelete=x&adminUsername=adminUsername&adminPassword=adminPassword
 	public void setUserManager(UserManager userManager) {
 		this.userManager = userManager;
 	}
-	
 }
