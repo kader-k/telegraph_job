@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.012" errors="0" skipped="0" tests="8" name="com.tmg.controller.UserManagerTest">
+<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="8" name="com.tmg.controller.UserManagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_11\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8"/>
-    <property name="classworlds.conf" value="D:\Projects\jobs\telegraph\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2558022686398078196.tmp"/>
+    <property name="classworlds.conf" value="D:\Projects\jobs\telegraph\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6216768199099638444.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_11\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_11\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files\nodejs\;D:\Data\git\KirinJS\Kirin;.;D:\Programs\apache-ant-1.8.4\bin;D:\Programs\maven\apache-maven-3.0.4\bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\cygwin;D:\Programs\Android\android-sdk\tools;D:\Programs\Android\android-sdk;C:\Users\Kader\AppData\Roaming\npm\;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -43,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_11\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean verify"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean verify package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,12 +61,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.008" classname="com.tmg.controller.UserManagerTest" name="retrieveUserDetailsAuthFailed"/>
+  <testcase time="0.006" classname="com.tmg.controller.UserManagerTest" name="retrieveUserDetailsAuthFailed"/>
   <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="deleteAccount"/>
   <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="retrieveUserDetailsAsBadAdminUser"/>
   <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="retrieveUserDetails"/>
-  <testcase time="0.001" classname="com.tmg.controller.UserManagerTest" name="createUserAccount"/>
-  <testcase time="0.001" classname="com.tmg.controller.UserManagerTest" name="retrieveUserDetailsAsAdminUser"/>
-  <testcase time="0.001" classname="com.tmg.controller.UserManagerTest" name="createSubscriberAccount"/>
-  <testcase time="0.001" classname="com.tmg.controller.UserManagerTest" name="updateAccount"/>
+  <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="createUserAccount"/>
+  <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="retrieveUserDetailsAsAdminUser"/>
+  <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="createSubscriberAccount"/>
+  <testcase time="0" classname="com.tmg.controller.UserManagerTest" name="updateAccount"/>
 </testsuite>
